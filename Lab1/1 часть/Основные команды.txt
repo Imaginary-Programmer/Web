@@ -1,0 +1,5 @@
+все команды из корневой директории (просто cmd прописать в адресе для запуска ком. строки)
+javac -classpath ./classes -d ./classes src/mypkg/FirstClass.java
+java -classpath ./classes mypkg.FirstClass
+jar cvmf Manifest.mf lab1.jar -C ./classes mypkg -C ./classes mypkg2    (в манифесте должна быть последняя пустая строка)
+java -jar lab1.jar
