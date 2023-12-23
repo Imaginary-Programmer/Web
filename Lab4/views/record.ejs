@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Record</title>
+	<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+	<form method="post">
+	<div class="form">
+		<h1>Запись на прием</h1>
+		<div class="input-form">
+			<input type="text" name="user_name" required placeholder="имя пациента">
+		</div>
+		<div class="input-form">
+			<input type="text" name="doctor_name" required placeholder="имя врача">
+		</div>
+		<div class="input-form">
+			<input type="datetime-local" name="date" required placeholder="дата">
+		</div>
+		<div class="input-form">
+			<input type="submit" value="Подать заявку">
+		</div>
+		<a href="/index" class="back">Вернуться на главную страницу</a>
+	</div>
+	<%if (success!=null){%>
+		<div class="form-status">
+			<%if (!success){%>
+				<h1><%= info%></h1>
+			<%} else {%>
+				<h2><%= info%></h2>
+			<%}%>	
+		</div>
+	<%}%>
+	</form>
+</body>
+</html>
